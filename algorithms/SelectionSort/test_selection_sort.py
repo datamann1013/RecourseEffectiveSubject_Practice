@@ -1,5 +1,5 @@
 import unittest
-from SelectionSort import selection_sort
+from selection_sort import selection_sort
 
 class SelectionSortTest(unittest.TestCase):
     def setUp(self):
