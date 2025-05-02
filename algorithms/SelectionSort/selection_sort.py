@@ -1,8 +1,7 @@
 def selection_sort(array):
-    if len(array) == 0:
-        return []
-    if len(array) == 1:
+    if len(array) == 1 or len(array) == 0:
         return array
+
     sorted_array = array.copy()
 
     for i in range(len(sorted_array)):
