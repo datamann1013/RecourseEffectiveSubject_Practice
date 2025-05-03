@@ -1,15 +1,10 @@
 def merge_sort(array):
-    copy_array = array.copy()
+    if len(array) == 1 or len(array) == 0: return array
 
-    if len(array) == 1 or len(array) == 0:
-        return array
+    mid = len(array) // 2
+    left, right = merge_sort(array[:mid]), merge_sort(array[mid:])
+    sorted_array, i, j = [], 0, 0
 
-    mid = len(copy_array) // 2
-    left = merge_sort(copy_array[:mid])
-    right = merge_sort(copy_array[mid:])
-
-    sorted_array = []
-    i = j = 0
     while i < len(left) and j < len(right):
         if left[i] <= right[j]:
             sorted_array.append(left[i])

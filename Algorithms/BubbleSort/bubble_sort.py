@@ -1,6 +1,5 @@
 def bubble_sort(array):
-    if len(array) == 1 or len(array) == 0:
-        return array
+    if len(array) == 1 or len(array) == 0: return array
 
     sorted_array = array.copy()
     length = len(sorted_array)
