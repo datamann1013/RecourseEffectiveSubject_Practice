@@ -5,14 +5,9 @@ def bubble_sort(array):
     length = len(sorted_array)
 
     while True:
-        swapped = False
-
-        swap_pairs = [(i - 1, i) for i in range(1, length)
-                      if sorted_array[i - 1] > sorted_array[i]]
-
+        swap_pairs = [(i - 1, i) for i in range(1, length) if sorted_array[i - 1] > sorted_array[i]]
         for a, b in swap_pairs:
             sorted_array[a], sorted_array[b] = sorted_array[b], sorted_array[a]
         if not swap_pairs:
             break
-
     return sorted_array
