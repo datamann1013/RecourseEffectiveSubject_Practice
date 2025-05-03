@@ -1,4 +1,4 @@
-class PhoneBook():
+class PhoneBook:
     def __init__(self):
         self.hashmap = dict()
 
