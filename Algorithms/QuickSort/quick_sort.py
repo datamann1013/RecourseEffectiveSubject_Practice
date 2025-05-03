@@ -1,7 +1,5 @@
 def quick_sort(array):
-    if len(array) == 1 or len(array) == 0:
-        return array
-
+    if len(array) == 1 or len(array) == 0: return array
     sorted_array = array.copy()
 
     def _quicksort(lo, hi):
@@ -11,8 +9,8 @@ def quick_sort(array):
             _quicksort(p + 1, hi)
 
     def partition(lo, hi):
-        pivot = sorted_array[hi]
-        i = lo
+        pivot, i = sorted_array[hi], lo
+
         for j in range(lo, hi):
             if sorted_array[j] <= pivot:
                 sorted_array[i], sorted_array[j] = sorted_array[j], sorted_array[i]
